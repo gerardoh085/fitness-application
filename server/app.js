@@ -28,7 +28,7 @@ app.listen(port, () => {
 });
 
 // static files loc:
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 // middleware setup:
 app.use(morgan("dev"));
