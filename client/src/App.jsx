@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./style.css";
 
-import Papa from "papaparse";
-import CSVReader from "react-csv-reader";
 import axios from "axios";
 
 import Navbar from "./components/navbar/Navbar";
+import { useParams } from "react-router-dom";
 
 function App() {
   // const [data, setData] = useState([]);
@@ -25,7 +23,8 @@ function App() {
   // }, []);
 
   const [backend, setBackend] = useState([]);
-
+  const { name } = useParams();
+  
   useEffect(() => {
     fetch("http://localhost:8080/")
       .then((res) => res.json())

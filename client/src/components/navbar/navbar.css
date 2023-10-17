@@ -6,6 +6,7 @@
 }
 body{
     position: relative;
+    height: 100vh;
 }
 
 
@@ -54,6 +55,7 @@ body{
     display: none;
 }
 
+
 .toggleScreen{
     /* display: ; */
     position: fixed;
@@ -61,18 +63,72 @@ body{
     top: 0;
     background-color: #2a43fd;
     height: 100%;
+    /* height: 100vh; */
     width: 100%;
     z-index: 4;
+    overflow-y: scroll;
+    padding-bottom: 1em;
+}
+
+.toggle-lists{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    gap: 1.5em;
+    font-size: 1.25em;
+    height: 100%;
 }
 
 @media screen and (max-width: 768px){
+    .toggler-container{
+        margin-right: 1em;
+    }
+    .user-info-container{
+        display: none;
+        opacity: 0;
+    }
     .btn-toggler{
         opacity: 1;
         display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transition: fill 0.6s linear;
+        -webkit-transition: fill 0.6s linear;
+        -moz-transition: fill 0.6s linear;
+        -ms-transition: fill 0.6s linear;
+        -o-transition: fill 0.6s linear;
+    }
+    
+    .btn-toggler:hover{
+        fill: white;
+    }
+    .link-path{
+        cursor: pointer !important;
+        width: auto;
+        /* border: 1px solid white; */
+        width: 100%;
+        padding: 0.6em;
+        text-align: center;
+
+    }
+    .link-path a{
+        text-decoration: none;
+        color: white;
+    }
+    .btnContainer{
+        display: flex;
+        justify-content: flex-end;
+        padding: 2em;
     }
     .link-paths{
         display: none;
         opacity: 0;
     }
+
 
 }
