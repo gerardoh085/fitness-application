@@ -1,0 +1,15 @@
+.calendar-items{
+    width: 300px;
+}
+.css-1t0788u-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
+    min-height: 210px !important;
+}
+.item-horizontal-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.workout-rec-title,.journal-title{
+    margin: 2em 0;
+}

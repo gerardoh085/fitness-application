@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
   console.log("get req home page");
   res.json({ tests: ["testing 1", "testing 2"] });
 });
+
 app.get("/exercises", (req, res) => {});
 app.get("/exercises/:id", (req, res) => {});
 app.get("/user/progress/:id", (req, res) => {});
