@@ -9,22 +9,28 @@ const Home = () => {
   const defaultDate = new Date();
   const HandleCalendar = () => {
     return (
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <StaticDatePicker
-          orientation="portrait"
-          defaultValue={dayjs(defaultDate)}
-        />
-      </LocalizationProvider>
+      <div>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <StaticDatePicker
+            orientation="portrait"
+            defaultValue={dayjs(defaultDate)}
+          />
+        </LocalizationProvider>
+      </div>
     );
   };
+
   return (
     <div className="home-container">
       <div className="main-home">
         <div className="home-title">
-          <p>Fitness Application</p>
+          <h2>Fitness Application</h2>
         </div>
         <div className="item-horizontal-display">
           <div className="calendar-items">
+            <div className="calendar-title">
+              <h2>Calendar</h2>
+            </div>
             <HandleCalendar></HandleCalendar>
           </div>
           <div className="workout-recs">
@@ -32,14 +38,14 @@ const Home = () => {
               <h2>Workout Recommendations:</h2>
             </div>
             <div className="workout-screen">
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
-              <div>Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
+              <div className="workout-item">Bench Presses</div>
             </div>
           </div>
           <div className="journal-display">
@@ -48,13 +54,13 @@ const Home = () => {
             </div>
             <div className="journal-display">
               <ul>
-                <li>item1</li>
-                <li>item1</li>
-                <li>item1</li>
-                <li>item1</li>
-                <li>item1</li>
-                <li>item1</li>
-                <li>item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
+                <li className="journal-entry-item">item1</li>
               </ul>
             </div>
           </div>

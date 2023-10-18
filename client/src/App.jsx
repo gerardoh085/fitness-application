@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import { useParams } from "react-router-dom";
 
 import Home from "./components/home/Home";
+import FooterInfo from "./components/footer/FooterInfo";
 
 function App() {
   // const [data, setData] = useState([]);
@@ -42,6 +43,7 @@ function App() {
       <div className="container">
         <Navbar></Navbar>
         <Home></Home>
+        <FooterInfo></FooterInfo>
       </div>
     </>
   );

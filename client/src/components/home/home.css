@@ -1,15 +1,116 @@
 .calendar-items{
-    width: 300px;
+    /* width: 300px; */
 }
 .css-1t0788u-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
-    min-height: 210px !important;
+    min-height: 250px !important;
 }
+.css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-actionBar{
+    display: none !important;   
+}
+.css-1hbyad5-MuiTypography-root{
+    display: none !important;
+}
+.home-container{
+    padding-bottom: 6em;
+}
+
 .item-horizontal-display{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    /* flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; */
 }
 .workout-rec-title,.journal-title{
-    margin: 2em 0;
+    /* margin: 1.2em 0; */
+    /* display: flex;
+    justify-content: center; */
+    /* padding: 1em 0; */
+}
+.main-home{
+    display: flex;
+    flex-direction: column;
+}
+.home-title{
+    display: flex;
+    justify-content: center;
+    /* padding: 2em; */
+    padding-top: 3em;
+    padding-bottom: 2em;    
+}
+
+.calendar-title{
+    display: flex;
+    justify-content: center;
+}
+
+.workout-screen{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+@media screen and (max-width: 867px){
+    .item-horizontal-display{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        justify-content: center !important;
+        align-items: center !important;
+        /* text-align: center; */
+    }
+    .css-15jcv2p-MuiPickersToolbar-content{
+        justify-content: center !important;
+    }
+    
+    .calendar-items{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        grid-row: 1/2;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+    .workout-recs{
+        grid-row: 2/3;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+    }
+    .workout-screen{
+        /* width: 100%; */
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .workout-rec-title{
+        text-decoration: underline;
+        padding: 1em 0;
+    }
+    .workout-item{
+        /* width: 100%; */
+    }
+    .journal-display{
+        grid-row: 3/4;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .journal-title{
+        text-decoration: underline;
+        padding: 1em 0;
+    }
+
 }
