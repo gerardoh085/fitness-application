@@ -10,6 +10,9 @@
 .css-1hbyad5-MuiTypography-root{
     display: none !important;
 }
+.css-15jcv2p-MuiPickersToolbar-content{
+    justify-content: center !important;
+}
 .home-container{
     padding-bottom: 6em;
 }
@@ -22,11 +25,20 @@
     flex-wrap: wrap;
     justify-content: space-around; */
 }
+
 .workout-rec-title,.journal-title{
-    /* margin: 1.2em 0; */
-    /* display: flex;
-    justify-content: center; */
-    /* padding: 1em 0; */
+    width: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 1em;
+    
+}
+.workout-rec-title h2{
+    text-align: center;
+}
+.workout-item{
+    padding: 0.5em 2em;
 }
 .main-home{
     display: flex;
@@ -48,9 +60,48 @@
 .workout-screen{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
+    /* height: 100%; */
+    /* justify-content: center; */
+    align-items: center;
 }
 
+.journal-entry-item{
+    list-style: none !important; 
+    padding: 0.5em 2em;  
+}
+.journal-display{
+    /* display: flex;
+    flex-direction: column; */
+}
+.journal-display ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* padding: 1em 2em; */
+}
+.journal-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    /* height: 100%; */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* chart: */
+.chart-main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50% !important;
+}
+.bar-chart{
+    width: 50% !important;
+    height: auto !important;
+}
 @media screen and (max-width: 867px){
     .item-horizontal-display{
         display: grid;

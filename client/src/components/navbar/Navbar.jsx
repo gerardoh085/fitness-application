@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [clicked, SetClicked] = useState(false);
@@ -39,7 +40,9 @@ const Navbar = () => {
                 <div className="link-path">Progress</div>
               </a>
               <a className="route-link" href="#">
-                <div className="link-path">Journal</div>
+                <Link to={"/journal"}>
+                  <div className="link-path">Journal</div>
+                </Link>
               </a>
               <a className="route-link" href="#">
                 <div className="link-path">Nutrition</div>
@@ -63,9 +66,11 @@ const Navbar = () => {
           </div>
           <div className="link-paths">
             <div>
-              <a href="#" className="path-item">
+              {/* <a href="#" className="path-item"> */}
+              <Link className="path-item" to={"/"}>
                 Home
-              </a>
+              </Link>
+              {/* </a> */}
             </div>
             <div>
               <a href="#" className="path-item">
@@ -83,9 +88,9 @@ const Navbar = () => {
               </a>
             </div>
             <div>
-              <a href="#" className="path-item">
+              <Link className="path-item" to={"/journal"}>
                 Journal
-              </a>
+              </Link>
             </div>
             <div>
               <a href="#" className="path-item">

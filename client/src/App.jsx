@@ -9,10 +9,10 @@ import { useParams } from "react-router-dom";
 
 import Home from "./components/home/Home";
 import FooterInfo from "./components/footer/FooterInfo";
+import JournalEntry from "./components/journal/JournalEntry";
 
 function App() {
   // const [data, setData] = useState([]);
-  // const API_KEY = "dfe5654b3738db5031f5178cfeaf4826e99ef713";
   // const header = {
   //   method: "GET",
   //   limit: "10",
@@ -42,7 +42,14 @@ function App() {
     <>
       <div className="container">
         <Navbar></Navbar>
-        <Home></Home>
+        {name === "home" ? (
+          <Home></Home>
+        ) : name === "journal" ? (
+          <JournalEntry></JournalEntry>
+        ) : (
+          <Home></Home>
+        )}
+        
         <FooterInfo></FooterInfo>
       </div>
     </>

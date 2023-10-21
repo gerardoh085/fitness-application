@@ -120,9 +120,13 @@ body{
 .path-item:hover{
     text-decoration: underline; 
 }
+.toggler-container{
+    display: none;
+}
 
 @media screen and (max-width: 768px){
     .toggler-container{
+        display: block;
         margin-right: 3em;
     }
     .user-info-container{
@@ -143,6 +147,12 @@ body{
         -moz-transition: fill 0.6s linear;
         -ms-transition: fill 0.6s linear;
         -o-transition: fill 0.6s linear;
+    }
+    .navbar-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        flex-wrap: nowrap;
     }
     
     .btn-toggler:hover{
